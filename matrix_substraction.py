@@ -2,8 +2,11 @@ def subtract_matrix(lst1, lst2):
     sub_matrix  = []
     for i in range(len(lst1)): # 0 1 2
         rows = []
-        for j in range(len(lst1[0])):  # 0 1 2
-            rows.append(float(lst1[i][j])-float(lst2[i][j])) #()
+        for j in range(len(lst1[0])):
+            if isinstance(lst1[i][j],float) or isinstance(lst2[i][j],float):  
+              rows.append(float(lst1[i][j])-float(lst2[i][j])) #()
+            else:
+              rows.append(int(lst1[i][j])-int(lst2[i][j]))
         sub_matrix.append(rows)
     return sub_matrix
 
