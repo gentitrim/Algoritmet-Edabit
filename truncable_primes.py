@@ -23,7 +23,7 @@ def truncatable(n):
         else:
             right = right[:len(right)-1]
             result2.append(False)
-
+        print(right)
     if all(result + result2):
         return 'both'
     elif all(result):
