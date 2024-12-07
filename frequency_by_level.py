@@ -3,7 +3,7 @@ def freq_count(lst,el):
     result = []
     for i in lst:
         if isinstance(i,list):
-            level +=1 + freq_count(i,el)[0][1]
+            level +=1 + freq_count(i,el)[0][i]
             count = i.count(el)
             result.append((level,count))
         else:
